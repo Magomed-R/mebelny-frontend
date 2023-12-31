@@ -1,0 +1,108 @@
+.info {
+  height: 540px;
+  background-image: url('../../../assets/history.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  margin-bottom: 80px;
+  padding-top: 60px;
+
+  @media (max-width:1024px) {
+    background-image: none;
+    margin-bottom: 60px;
+    padding-top: 20px;
+  }
+
+  @media (max-width: 375px) {
+    margin-bottom: 110px;
+  }
+}
+
+.textWrapper {
+  background-color: #5B5B5B;
+  max-width: 540px;
+  padding: 50px 28px 42px 28px;
+  position: relative;
+
+  @media (max-width:1024px) {
+    margin: 0 auto;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 60px;
+    background-color: #873101;
+    right: 100px;
+
+    @media (max-width:1024px) {
+      right: 0;
+    }
+  }
+
+  &::before {
+    @media (max-width:1024px) {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 99%;
+      left: 0;
+      background-image: url('../../../assets/history.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+}
+
+.textTop {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  line-height: 1.25;
+  letter-spacing: 2px;
+}
+
+.textBot {
+  color: #fff;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.35;
+  letter-spacing: 1.8px;
+  max-width: 450px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media (max-width:1024px) {
+    max-width: 340px;
+    margin: 0 auto;
+    margin-bottom: 90px;
+  }
+}
+
+.botItem {
+  color: #343434;
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 127.5%;
+}
+
+.botCenter {
+  font-size: 144px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: rgba(90, 90, 90, 0.10);
+
+  @media (max-width: 1024px) {
+    order: -1;
+    font-size: 111px;
+  }
+}

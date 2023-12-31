@@ -1,0 +1,23 @@
+.title,
+.titleDark {
+  font-weight: 700;
+  margin-bottom: var(--mb);
+  font-size: 35px;
+
+  &::first-letter {
+    color: #873101;
+    text-transform: uppercase;
+  }
+
+  @media (max-width:768px) {
+    font-size: 20px;
+  }
+}
+
+.titleDark {
+  color: #343434;
+}
+
+.title {
+  color: #fff;
+}

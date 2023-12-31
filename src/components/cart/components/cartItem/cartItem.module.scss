@@ -1,0 +1,136 @@
+.cartItem {
+  display: flex;
+  align-items: center;
+  background-color: #F2F3F5;
+  width: 320px;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+.wrapper {
+  margin-left: 10px;
+  flex-grow: 1;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.link {
+  display: block;
+  color: #343434;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.oldPrice {
+  font-size: 18px;
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.price, 
+.priceWithDiscount {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.priceWithDiscount {
+  color: #dc2424;
+}
+
+.image {
+  img {
+    width: 120px;
+  }
+}
+
+@-webkit-keyframes gradient {
+  0% {background-color: rgba(136,136,136,0.8);}
+	50% {background-color: rgba(255,255,255,1);}
+	100% {background-color: rgba(136,136,136,0.8);}
+}
+@-moz-keyframes gradient {
+  0% {background-color: rgba(136,136,136,0.8);}
+	50% {background-color: rgba(255,255,255,1);}
+	100% {background-color: rgba(136,136,136,0.8);}
+}
+@keyframes gradient {
+  0% {background-color: rgba(136,136,136,0.8);}
+	50% {background-color: rgba(255,255,255,1);}
+	100% {background-color: rgba(136,136,136,0.8);}
+}
+
+.imageLoad {
+  height: 120px;
+  width: 120px;
+  background-color: rgba(136,136,136,1);
+  
+  -webkit-animation: gradient 5s ease infinite;
+  -moz-animation: gradient 5s ease infinite;
+  animation: gradient 5s ease infinite;
+}
+
+.infoLoad {
+    height: 100%;
+    width: 100%;
+    margin-left: 10px;
+
+    &_block {
+      width: 100%;
+      height: 20px;
+      margin-bottom: 10px;
+      background-color: rgba(136,136,136,1);
+  
+      -webkit-animation: gradient 5s ease infinite;
+      -moz-animation: gradient 5s ease infinite;
+      animation: gradient 5s ease infinite;
+    }
+
+    &_last {
+      width: 25%;
+      height: 20px;
+      margin-top: 50px;
+      margin-left: auto;
+      background-color: rgba(136,136,136,1);
+  
+      -webkit-animation: gradient 5s ease infinite;
+      -moz-animation: gradient 5s ease infinite;
+      animation: gradient 5s ease infinite;
+    }
+}
+
+.button {
+  position: relative;
+  background-color: transparent;
+  width: 25px;
+  height: 25px;
+  border: none;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: '-';
+    font-size: 18px;
+    line-height: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &Plus::before {
+    content: '+';
+    line-height: 0;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.count {
+  font-size: 18px;
+  margin: 0 5px;
+}

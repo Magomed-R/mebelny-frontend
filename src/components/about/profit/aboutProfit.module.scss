@@ -1,0 +1,73 @@
+.wrapper {
+  margin-bottom: 150px;
+}
+
+.title {
+  color: #873101;
+  font-family: Open Sans;
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 68px;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.item {
+  padding-top: 140px;
+  color: #343434;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 135%;
+  letter-spacing: 1.26px;
+  position: relative;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    padding-top: 110px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    left: -20px;
+  }
+}
+
+.itemFirst {
+  &::before {
+    background-image: url('../../../assets/aboutBentfits1.png');
+  }
+}
+
+.itemSecond {
+  &::before {
+    background-image: url('../../../assets/aboutBentfits2.png');
+  }
+}
+
+.itemThird {
+  &::before {
+    background-image: url('../../../assets/aboutBentfits3.png');
+  }
+}
+
+.itemFours {
+  &::before {
+    background-image: url('../../../assets/aboutBentfits4.png');
+  }
+}

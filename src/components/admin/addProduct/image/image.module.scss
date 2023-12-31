@@ -1,0 +1,59 @@
+.wrapper {
+  width: 190px;
+  height: 200px;
+  border: 1px solid #707070;
+  padding: 30px 10px 10px 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+  position: relative;
+}
+
+.preview {
+  border-color: blue;
+}
+
+.previewBtn {
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #707070;
+    color: #fff;
+  }
+}
+
+.image {
+  display: block;
+  max-width: 150px;
+  height: 140px;
+  margin-bottom: 5px;
+}
+
+.name {
+  text-align: center;
+}
+
+.delete {
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #707070;
+    color: #fff;
+  }
+}

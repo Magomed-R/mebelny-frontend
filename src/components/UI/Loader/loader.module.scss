@@ -1,0 +1,57 @@
+.wrapper {
+  max-width: 300px;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 24px;
+}
+
+.text {
+  margin-bottom: 10px;
+}
+
+.bar {
+  width: 100%;
+  height: 30px;
+  background-color: #e5e5e5;
+  position: relative;
+}
+
+@keyframes load {
+  0% {
+    width: 0%;
+    left: 0;
+  }
+
+  25% {
+    left: 0;
+    width: 50%;
+  }
+
+  50% {
+    width: 100%;
+    right: 0;
+  }
+
+  75% {
+    width: 50%;
+    right: 0;
+  }
+
+  100% {
+    width: 0%;
+    right: 0;
+  }
+}
+
+.barChild {
+  position: absolute;
+  height: 30px;
+  background-color: #343434;
+  animation: load;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}

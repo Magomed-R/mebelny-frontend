@@ -1,0 +1,35 @@
+.logo {
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__img {
+
+    @media (max-width: 1024px) {
+      max-width: 40px;
+    }
+
+    &__light {
+      @media (max-width:1024px) {
+        max-width: 87px;
+      }
+    }
+  }
+
+  &__text {
+    max-width: 90px;
+    font-size: 18px;
+    line-height: 1.11;
+    margin-left: 26px;
+    color: #000;
+    font-family: Open Sans;
+
+    @media (max-width: 1024px) {
+      font-size: 12px;
+      margin-left: 10px;
+    }
+  }
+}

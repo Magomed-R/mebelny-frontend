@@ -1,0 +1,72 @@
+.BasicSlider {
+  margin-bottom: var(--mb);
+
+  :global(.slick-prev) {
+    left: 0;
+    z-index: 10;
+    width: 30px;
+    height: 30px;
+    opacity: 0.2;
+    transition: opacity 0.5s;
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 20px;
+      background-color: rgba(52, 52, 52, 1);
+      transform: rotate(45deg);
+      left: 0;
+      bottom: 7.5px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 20px;
+      background-color: rgba(52, 52, 52, 1);
+      transform: rotate(-45deg);
+      top: 7.5px;
+      left: 0;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  :global(.slick-next) {
+    right: 0;
+    width: 30px;
+    height: 30px;
+    opacity: 0.2;
+    transition: opacity 0.5s;
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 20px;
+      background-color: rgba(52, 52, 52, 1);
+      transform: rotate(-45deg);
+      right: 0;
+      bottom: 7.5px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 20px;
+      background-color: rgba(52, 52, 52, 1);
+      transform: rotate(45deg);
+      top: 7.5px;
+      right: 0;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

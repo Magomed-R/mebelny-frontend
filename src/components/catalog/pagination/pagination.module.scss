@@ -1,0 +1,47 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  font-family: Roboto;
+  font-weight: 300;
+  margin-bottom: 80px;
+}
+
+.page,
+.pageActive {
+  background-color: transparent;
+  border-color: transparent;
+  font-size: 20px;
+  cursor: pointer;
+  color: #343434;
+  opacity: 0.5;
+}
+
+.pageActive {
+  opacity: 1;
+}
+
+.page:hover,
+.nextArrow:hover,
+.prevArrow:hover {
+  opacity: 0.75;
+}
+
+.nextArrow,
+.prevArrow {
+  border: transparent;
+  background-color: transparent;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  color: #343434;
+  opacity: 0.5;
+}
+
+.nextArrow::after {
+  content: '>';
+}
+
+.prevArrow::after {
+  content: '<';
+}

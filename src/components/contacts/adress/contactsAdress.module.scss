@@ -1,0 +1,65 @@
+.wrapper {
+  background-image: url('../../../assets/adressBg.png');
+  background-size: cover;
+  background-position: center center;
+  padding: 30px 35px 70px 35px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 150px;
+
+  @media (max-width:768px) {
+    margin-bottom: 90px;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 25px;
+  color: #CCB2A3;
+  font-weight: 700;
+  margin-bottom: 50px;
+
+  @media (max-width:768px) {
+    margin-bottom: 40px;
+  }
+}
+
+.adress {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.phone,
+.mail {
+  color: #fff;
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 10px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background-color: #CCB2A3;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+  }
+}
+
+.mail,
+.info,
+.workTime {
+  margin-bottom: 20px;
+}
+
+.metro {
+  font-weight: 600;
+}

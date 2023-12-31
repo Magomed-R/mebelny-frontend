@@ -1,0 +1,285 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 100px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.title {
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #343434;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+.oldPrice {
+  font-size: 16px;
+  text-decoration: line-through;
+  line-height: 1;
+  color: #a1a2a4;
+}
+
+.newPrice {
+  margin-left: 10px;
+}
+
+.collection {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  color: #343434;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+.description {
+  color: #343434;
+  font-weight: 300;
+  margin-bottom: 30px;
+  white-space: pre-wrap;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+}
+
+.price {
+  color: #873101;
+  font-family: Open Sans;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 30px;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+}
+
+.slider {
+  padding-bottom: 30px;
+  max-width: 700px;
+  width: 100%;
+  margin-right: 30px;
+
+  @media (max-width:1024px) {
+    max-width: 500px;
+  }
+
+  @media (max-width:425px) {
+    max-width: 300px;
+    margin-right: 0px;
+  }
+
+  :global(.slick-prev) {
+    top: 100%;
+    left: 10%;
+    z-index: 10;
+    width: 30px;
+    height: 30px;
+    opacity: 0.2;
+    transition: opacity 0.5s;
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 20px;
+      background-color: rgba(52, 52, 52, 1);
+      transform: rotate(45deg);
+      left: 0;
+      bottom: 7.5px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 20px;
+      background-color: rgba(52, 52, 52, 1);
+      transform: rotate(-45deg);
+      top: 7.5px;
+      left: 0;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  :global(.slick-next) {
+    top: 100%;
+    right: 10%;
+    width: 30px;
+    height: 30px;
+    opacity: 0.2;
+    transition: opacity 0.5s;
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 20px;
+      background-color: rgba(52, 52, 52, 1);
+      transform: rotate(-45deg);
+      right: 0;
+      bottom: 7.5px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 20px;
+      background-color: rgba(52, 52, 52, 1);
+      transform: rotate(45deg);
+      top: 7.5px;
+      right: 0;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.slide {
+  img {
+    margin: 0 auto;
+    max-width: 700px;
+    // height: 400px;
+    max-height: 500px;
+
+    @media (max-width: 1024px) {
+      max-width: 500px;
+    }
+
+    @media (max-width: 425px) {
+      max-width: 300px;
+    }
+  }
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.imageWrapper {
+  max-width: 300px;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.topMobile {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+  }
+}
+
+.contentDesktop {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.edit,
+.delete {
+  display: block;
+  color: #343434;
+  font-size: 20px;
+  margin-top: 20px;
+  background-color: #873101;
+  padding: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.submitDeleteBtns {
+  display: flex;
+}
+
+.productInCart {
+
+  &Wrapper {
+    display: flex;
+  }
+
+  &Btn {
+    cursor: pointer;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #873101;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &Minus,
+  &Plus {
+    &::after {
+      position: absolute;
+      content: '';
+      border-radius: 1px;
+      width: 30px;
+      height: 3px;
+      background-color: #fff;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &Plus {
+    &::before {
+      position: absolute;
+      content: '';
+      border-radius: 1px;
+      width: 3px;
+      height: 30px;
+      background-color: #fff;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &Count {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 1;
+    font-size: 35px;
+    font-weight: 600;
+  }
+}

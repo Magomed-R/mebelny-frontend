@@ -1,0 +1,34 @@
+.advantages {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 125px;
+
+  @media (max-width:1024px) {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+}
+
+.item {
+  max-width: 280px;
+  position: relative;
+  font-size: 18px;
+  color: #343434;
+  font-weight: 600;
+
+  @media (max-width:1024px) {
+    &:not(:last-child) {
+      margin-bottom: 100px;
+    }
+  }
+}
+
+.num {
+  position: absolute;
+  font-size: 176px;
+  font-weight: 600;
+  color: rgba(90, 90, 90, 0.10);
+  top: -30px;
+  left: -57px;
+}

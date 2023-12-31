@@ -1,0 +1,51 @@
+.App {
+  font-family: Raleway;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.catalog,
+.notFound,
+.about,
+.product,
+.main,
+.contacts,
+.cart {
+  font-family: Raleway;
+}
+
+.login,
+.user,
+.register,
+.admin,
+.cart {
+  font-family: Raleway;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.notFound {
+  font-size: 50px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 50vh;
+  transform: translateY(-50%);
+
+  a {
+    display: block;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
